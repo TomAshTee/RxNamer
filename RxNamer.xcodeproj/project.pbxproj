@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7CB2EA44C3388E39427DB4B /* Pods_RxNamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00771DC6E32B01C3F39E52EB /* Pods_RxNamer.framework */; };
 		D6C051DE2146DB7900B4F044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C051DD2146DB7900B4F044 /* AppDelegate.swift */; };
 		D6C051E02146DB7900B4F044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C051DF2146DB7900B4F044 /* ViewController.swift */; };
 		D6C051E32146DB7900B4F044 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C051E12146DB7900B4F044 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00771DC6E32B01C3F39E52EB /* Pods_RxNamer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxNamer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C389952F144E280AA3968E /* Pods-RxNamer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxNamer.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxNamer/Pods-RxNamer.release.xcconfig"; sourceTree = "<group>"; };
+		A1A0A8746E0FD4417EE740A3 /* Pods-RxNamer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxNamer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxNamer/Pods-RxNamer.debug.xcconfig"; sourceTree = "<group>"; };
 		D6C051DA2146DB7900B4F044 /* RxNamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxNamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C051DD2146DB7900B4F044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6C051DF2146DB7900B4F044 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CB2EA44C3388E39427DB4B /* Pods_RxNamer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5A699ED5489A561D05F6AB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0A8746E0FD4417EE740A3 /* Pods-RxNamer.debug.xcconfig */,
+				28C389952F144E280AA3968E /* Pods-RxNamer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD7201E7580A598588BF9DD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00771DC6E32B01C3F39E52EB /* Pods_RxNamer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D6C051D12146DB7900B4F044 = {
 			isa = PBXGroup;
 			children = (
 				D6C051DC2146DB7900B4F044 /* RxNamer */,
 				D6C051DB2146DB7900B4F044 /* Products */,
+				B5A699ED5489A561D05F6AB1 /* Pods */,
+				CD7201E7580A598588BF9DD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6C051EC2146DB7B00B4F044 /* Build configuration list for PBXNativeTarget "RxNamer" */;
 			buildPhases = (
+				BC682A7CB597A921A035AE72 /* [CP] Check Pods Manifest.lock */,
 				D6C051D62146DB7900B4F044 /* Sources */,
 				D6C051D72146DB7900B4F044 /* Frameworks */,
 				D6C051D82146DB7900B4F044 /* Resources */,
+				10020D10FE284A36CBFB7F6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10020D10FE284A36CBFB7F6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxNamer/Pods-RxNamer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxNamer/Pods-RxNamer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC682A7CB597A921A035AE72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxNamer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D6C051D62146DB7900B4F044 /* Sources */ = {
@@ -278,6 +345,7 @@
 		};
 		D6C051ED2146DB7B00B4F044 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A0A8746E0FD4417EE740A3 /* Pods-RxNamer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +364,7 @@
 		};
 		D6C051EE2146DB7B00B4F044 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C389952F144E280AA3968E /* Pods-RxNamer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
