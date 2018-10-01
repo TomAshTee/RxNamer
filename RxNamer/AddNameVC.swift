@@ -20,7 +20,17 @@ class AddNameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindSubmitBtn()
 
     }
+    
+    func bindSubmitBtn() {
+        submitBtn.rx.tap.subscribe(onNext: {
+            if self.newNameTextField.text != "" {
+                self.nameSubject.onNext(self.newNameTextField.text!)
+            }
+        }).disposed(by: disposeBag)
+    }
+    
 
 }
